@@ -7,18 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		545E23002D663CE300ACA246 /* FlyoverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545E22FF2D663CE300ACA246 /* FlyoverMapView.swift */; };
 		54BDC41C2D590BDE002D13B3 /* AirPorterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC41B2D590BDE002D13B3 /* AirPorterApp.swift */; };
-		54BDC41E2D590BDE002D13B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC41D2D590BDE002D13B3 /* ContentView.swift */; };
 		54BDC4202D590BE1002D13B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BDC41F2D590BE1002D13B3 /* Assets.xcassets */; };
 		54BDC4232D590BE1002D13B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BDC4222D590BE1002D13B3 /* Preview Assets.xcassets */; };
+		54BDC42A2D590DA8002D13B3 /* WalkingRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC4292D590DA8002D13B3 /* WalkingRouteView.swift */; };
+		54BDC42C2D590DD8002D13B3 /* WalkingRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC42B2D590DD8002D13B3 /* WalkingRouteViewModel.swift */; };
+		54BDC42E2D591193002D13B3 /* MapPolylineOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC42D2D591193002D13B3 /* MapPolylineOverlay.swift */; };
+		54BDC4302D5911D5002D13B3 /* WakingRouteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC42F2D5911D5002D13B3 /* WakingRouteResponse.swift */; };
+		54BDC4322D5911E7002D13B3 /* RoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC4312D5911E7002D13B3 /* RoutePoint.swift */; };
+		54BDC4342D59137F002D13B3 /* SatelliteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC4332D59137F002D13B3 /* SatelliteMapView.swift */; };
+		54BDC4362D5DACE8002D13B3 /* AmenityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC4352D5DACE8002D13B3 /* AmenityType.swift */; };
+		54BDC4382D5DB60E002D13B3 /* AirportAmenitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC4372D5DB60E002D13B3 /* AirportAmenitiesView.swift */; };
+		54BDC43A2D5DB628002D13B3 /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDC4392D5DB628002D13B3 /* AirportDetailView.swift */; };
+		54BDDD842D8A7D0E0036C958 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD832D8A7D0B0036C958 /* HomeView.swift */; };
+		54BDDD872D8B84840036C958 /* AirportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD862D8B84810036C958 /* AirportService.swift */; };
+		54BDDD8A2D8B84B80036C958 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD892D8B84B50036C958 /* Airport.swift */; };
+		54BDDD8D2D8B84FD0036C958 /* AirportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD8C2D8B84F20036C958 /* AirportViewModel.swift */; };
+		54BDDD8F2D8BCE0B0036C958 /* GateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD8E2D8BCE070036C958 /* GateService.swift */; };
+		54BDDD912D8D1CA80036C958 /* GateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD902D8D1CA50036C958 /* GateResponse.swift */; };
+		54BDDD932D8D1CAE0036C958 /* Gate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD922D8D1CAD0036C958 /* Gate.swift */; };
+		54BDDD952D8D1CCD0036C958 /* AirportGatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD942D8D1CC70036C958 /* AirportGatesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		545E22FF2D663CE300ACA246 /* FlyoverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyoverMapView.swift; sourceTree = "<group>"; };
 		54BDC4182D590BDE002D13B3 /* AirPorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPorter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BDC41B2D590BDE002D13B3 /* AirPorterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPorterApp.swift; sourceTree = "<group>"; };
-		54BDC41D2D590BDE002D13B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54BDC41F2D590BE1002D13B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54BDC4222D590BE1002D13B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54BDC4292D590DA8002D13B3 /* WalkingRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingRouteView.swift; sourceTree = "<group>"; };
+		54BDC42B2D590DD8002D13B3 /* WalkingRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingRouteViewModel.swift; sourceTree = "<group>"; };
+		54BDC42D2D591193002D13B3 /* MapPolylineOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPolylineOverlay.swift; sourceTree = "<group>"; };
+		54BDC42F2D5911D5002D13B3 /* WakingRouteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakingRouteResponse.swift; sourceTree = "<group>"; };
+		54BDC4312D5911E7002D13B3 /* RoutePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePoint.swift; sourceTree = "<group>"; };
+		54BDC4332D59137F002D13B3 /* SatelliteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteMapView.swift; sourceTree = "<group>"; };
+		54BDC4352D5DACE8002D13B3 /* AmenityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityType.swift; sourceTree = "<group>"; };
+		54BDC4372D5DB60E002D13B3 /* AirportAmenitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAmenitiesView.swift; sourceTree = "<group>"; };
+		54BDC4392D5DB628002D13B3 /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
+		54BDDD832D8A7D0B0036C958 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		54BDDD862D8B84810036C958 /* AirportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportService.swift; sourceTree = "<group>"; };
+		54BDDD892D8B84B50036C958 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		54BDDD8C2D8B84F20036C958 /* AirportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportViewModel.swift; sourceTree = "<group>"; };
+		54BDDD8E2D8BCE070036C958 /* GateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateService.swift; sourceTree = "<group>"; };
+		54BDDD902D8D1CA50036C958 /* GateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateResponse.swift; sourceTree = "<group>"; };
+		54BDDD922D8D1CAD0036C958 /* Gate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gate.swift; sourceTree = "<group>"; };
+		54BDDD942D8D1CC70036C958 /* AirportGatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportGatesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +85,23 @@
 		54BDC41A2D590BDE002D13B3 /* AirPorter */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDD8B2D8B84EC0036C958 /* ViewModels */,
+				54BDDD882D8B84AB0036C958 /* Models */,
+				54BDDD852D8B84710036C958 /* Service */,
+				54BDDD832D8A7D0B0036C958 /* HomeView.swift */,
 				54BDC41B2D590BDE002D13B3 /* AirPorterApp.swift */,
-				54BDC41D2D590BDE002D13B3 /* ContentView.swift */,
+				54BDC42D2D591193002D13B3 /* MapPolylineOverlay.swift */,
 				54BDC41F2D590BE1002D13B3 /* Assets.xcassets */,
 				54BDC4212D590BE1002D13B3 /* Preview Content */,
+				54BDC4292D590DA8002D13B3 /* WalkingRouteView.swift */,
+				54BDC42B2D590DD8002D13B3 /* WalkingRouteViewModel.swift */,
+				54BDC42F2D5911D5002D13B3 /* WakingRouteResponse.swift */,
+				54BDC4312D5911E7002D13B3 /* RoutePoint.swift */,
+				54BDC4332D59137F002D13B3 /* SatelliteMapView.swift */,
+				54BDC4352D5DACE8002D13B3 /* AmenityType.swift */,
+				54BDC4372D5DB60E002D13B3 /* AirportAmenitiesView.swift */,
+				54BDC4392D5DB628002D13B3 /* AirportDetailView.swift */,
+				545E22FF2D663CE300ACA246 /* FlyoverMapView.swift */,
 			);
 			path = AirPorter;
 			sourceTree = "<group>";
@@ -65,6 +112,34 @@
 				54BDC4222D590BE1002D13B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54BDDD852D8B84710036C958 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				54BDDD8E2D8BCE070036C958 /* GateService.swift */,
+				54BDDD862D8B84810036C958 /* AirportService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		54BDDD882D8B84AB0036C958 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54BDDD922D8D1CAD0036C958 /* Gate.swift */,
+				54BDDD902D8D1CA50036C958 /* GateResponse.swift */,
+				54BDDD892D8B84B50036C958 /* Airport.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		54BDDD8B2D8B84EC0036C958 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				54BDDD942D8D1CC70036C958 /* AirportGatesViewModel.swift */,
+				54BDDD8C2D8B84F20036C958 /* AirportViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +212,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54BDC41E2D590BDE002D13B3 /* ContentView.swift in Sources */,
+				54BDC4342D59137F002D13B3 /* SatelliteMapView.swift in Sources */,
+				54BDDD842D8A7D0E0036C958 /* HomeView.swift in Sources */,
+				54BDC42A2D590DA8002D13B3 /* WalkingRouteView.swift in Sources */,
+				54BDDD8A2D8B84B80036C958 /* Airport.swift in Sources */,
+				545E23002D663CE300ACA246 /* FlyoverMapView.swift in Sources */,
+				54BDC42C2D590DD8002D13B3 /* WalkingRouteViewModel.swift in Sources */,
+				54BDC43A2D5DB628002D13B3 /* AirportDetailView.swift in Sources */,
+				54BDC4382D5DB60E002D13B3 /* AirportAmenitiesView.swift in Sources */,
+				54BDDD8D2D8B84FD0036C958 /* AirportViewModel.swift in Sources */,
+				54BDC42E2D591193002D13B3 /* MapPolylineOverlay.swift in Sources */,
+				54BDDD932D8D1CAE0036C958 /* Gate.swift in Sources */,
 				54BDC41C2D590BDE002D13B3 /* AirPorterApp.swift in Sources */,
+				54BDC4362D5DACE8002D13B3 /* AmenityType.swift in Sources */,
+				54BDC4302D5911D5002D13B3 /* WakingRouteResponse.swift in Sources */,
+				54BDC4322D5911E7002D13B3 /* RoutePoint.swift in Sources */,
+				54BDDD912D8D1CA80036C958 /* GateResponse.swift in Sources */,
+				54BDDD952D8D1CCD0036C958 /* AirportGatesViewModel.swift in Sources */,
+				54BDDD8F2D8BCE0B0036C958 /* GateService.swift in Sources */,
+				54BDDD872D8B84840036C958 /* AirportService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

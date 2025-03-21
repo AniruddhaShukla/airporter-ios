@@ -11,7 +11,16 @@ import SwiftUI
 struct AirPorterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+        }
+    }
+}
+
+struct SettingsView: View {
+    var body: some View {
+        NavigationView {
+            Text("Settings Content")
+                .navigationTitle("Settings")
         }
     }
 }
