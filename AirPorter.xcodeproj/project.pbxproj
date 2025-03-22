@@ -28,6 +28,12 @@
 		54BDDD912D8D1CA80036C958 /* GateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD902D8D1CA50036C958 /* GateResponse.swift */; };
 		54BDDD932D8D1CAE0036C958 /* Gate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD922D8D1CAD0036C958 /* Gate.swift */; };
 		54BDDD952D8D1CCD0036C958 /* AirportGatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD942D8D1CC70036C958 /* AirportGatesViewModel.swift */; };
+		54BDDD9B2D8F16EF0036C958 /* AirportDetailsSkinnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD9A2D8F16E50036C958 /* AirportDetailsSkinnyView.swift */; };
+		54BDDD9D2D8F5ABC0036C958 /* NearbyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD9C2D8F5AB80036C958 /* NearbyService.swift */; };
+		54BDDD9F2D8F5AE20036C958 /* HotelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDD9E2D8F5ADF0036C958 /* HotelsResponse.swift */; };
+		54BDDDA12D8F5AF20036C958 /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDA02D8F5AF00036C958 /* Hotel.swift */; };
+		54BDDDA32D8F5BBD0036C958 /* NearbyHotelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDA22D8F5BBA0036C958 /* NearbyHotelsView.swift */; };
+		54BDDDA52D8F5C600036C958 /* NearbyHotelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDA42D8F5C5B0036C958 /* NearbyHotelsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +59,12 @@
 		54BDDD902D8D1CA50036C958 /* GateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateResponse.swift; sourceTree = "<group>"; };
 		54BDDD922D8D1CAD0036C958 /* Gate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gate.swift; sourceTree = "<group>"; };
 		54BDDD942D8D1CC70036C958 /* AirportGatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportGatesViewModel.swift; sourceTree = "<group>"; };
+		54BDDD9A2D8F16E50036C958 /* AirportDetailsSkinnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsSkinnyView.swift; sourceTree = "<group>"; };
+		54BDDD9C2D8F5AB80036C958 /* NearbyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyService.swift; sourceTree = "<group>"; };
+		54BDDD9E2D8F5ADF0036C958 /* HotelsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsResponse.swift; sourceTree = "<group>"; };
+		54BDDDA02D8F5AF00036C958 /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		54BDDDA22D8F5BBA0036C958 /* NearbyHotelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyHotelsView.swift; sourceTree = "<group>"; };
+		54BDDDA42D8F5C5B0036C958 /* NearbyHotelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyHotelsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,8 @@
 		54BDC41A2D590BDE002D13B3 /* AirPorter */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDDA22D8F5BBA0036C958 /* NearbyHotelsView.swift */,
+				54BDDD9A2D8F16E50036C958 /* AirportDetailsSkinnyView.swift */,
 				54BDDD8B2D8B84EC0036C958 /* ViewModels */,
 				54BDDD882D8B84AB0036C958 /* Models */,
 				54BDDD852D8B84710036C958 /* Service */,
@@ -117,6 +131,7 @@
 		54BDDD852D8B84710036C958 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDD9C2D8F5AB80036C958 /* NearbyService.swift */,
 				54BDDD8E2D8BCE070036C958 /* GateService.swift */,
 				54BDDD862D8B84810036C958 /* AirportService.swift */,
 			);
@@ -126,6 +141,8 @@
 		54BDDD882D8B84AB0036C958 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDDA02D8F5AF00036C958 /* Hotel.swift */,
+				54BDDD9E2D8F5ADF0036C958 /* HotelsResponse.swift */,
 				54BDDD922D8D1CAD0036C958 /* Gate.swift */,
 				54BDDD902D8D1CA50036C958 /* GateResponse.swift */,
 				54BDDD892D8B84B50036C958 /* Airport.swift */,
@@ -136,6 +153,7 @@
 		54BDDD8B2D8B84EC0036C958 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDDA42D8F5C5B0036C958 /* NearbyHotelsViewModel.swift */,
 				54BDDD942D8D1CC70036C958 /* AirportGatesViewModel.swift */,
 				54BDDD8C2D8B84F20036C958 /* AirportViewModel.swift */,
 			);
@@ -213,8 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				54BDC4342D59137F002D13B3 /* SatelliteMapView.swift in Sources */,
+				54BDDD9F2D8F5AE20036C958 /* HotelsResponse.swift in Sources */,
 				54BDDD842D8A7D0E0036C958 /* HomeView.swift in Sources */,
 				54BDC42A2D590DA8002D13B3 /* WalkingRouteView.swift in Sources */,
+				54BDDDA32D8F5BBD0036C958 /* NearbyHotelsView.swift in Sources */,
+				54BDDDA52D8F5C600036C958 /* NearbyHotelsViewModel.swift in Sources */,
+				54BDDD9B2D8F16EF0036C958 /* AirportDetailsSkinnyView.swift in Sources */,
 				54BDDD8A2D8B84B80036C958 /* Airport.swift in Sources */,
 				545E23002D663CE300ACA246 /* FlyoverMapView.swift in Sources */,
 				54BDC42C2D590DD8002D13B3 /* WalkingRouteViewModel.swift in Sources */,
@@ -224,7 +246,9 @@
 				54BDC42E2D591193002D13B3 /* MapPolylineOverlay.swift in Sources */,
 				54BDDD932D8D1CAE0036C958 /* Gate.swift in Sources */,
 				54BDC41C2D590BDE002D13B3 /* AirPorterApp.swift in Sources */,
+				54BDDDA12D8F5AF20036C958 /* Hotel.swift in Sources */,
 				54BDC4362D5DACE8002D13B3 /* AmenityType.swift in Sources */,
+				54BDDD9D2D8F5ABC0036C958 /* NearbyService.swift in Sources */,
 				54BDC4302D5911D5002D13B3 /* WakingRouteResponse.swift in Sources */,
 				54BDC4322D5911E7002D13B3 /* RoutePoint.swift in Sources */,
 				54BDDD912D8D1CA80036C958 /* GateResponse.swift in Sources */,

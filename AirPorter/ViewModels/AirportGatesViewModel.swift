@@ -16,6 +16,7 @@ class AirportGatesViewModel {
         do {
             gates = try await gateService.fetchGates(for: iataCode)
         } catch {
+            gates = []
             print("Error fetching gates: \(error)")
         }
     }

@@ -13,7 +13,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             List(viewModel.airports) { airport in
-                NavigationLink(destination: AirportDetailView(airport: airport)) {
+                NavigationLink(destination: AirportDetailsSkinnyView(airport: airport)) {
                     VStack(alignment: .leading) {
                         Text(airport.name)
                             .font(.headline)
