@@ -21,12 +21,18 @@ struct AirportDetailsSkinnyView: View {
                 Text(airport.city).font(.subheadline)
             }
             Section(content: {
-                NavigationLink(destination: NearbyHotelsView(iataCode: airport.iataCode)) {
-                     Text("Hotels")
+                NavigationLink(destination: NearbyHotelsView(airport: airport)) {
+                    HStack {
+                        Image(systemName: "bed.double.circle.fill")
+                        Text("Hotels")
+                    }
                  }
                 
                 NavigationLink(destination: Text("Future of nearby resturants")) {
-                     Text("Restaurants")
+                    HStack {
+                        Image(systemName: "fork.knife.circle.fill")
+                        Text("Restaurants")
+                    }
                  }
             }, header: {
                 Text("Nearby")
