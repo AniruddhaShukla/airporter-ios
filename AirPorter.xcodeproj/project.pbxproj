@@ -41,6 +41,8 @@
 		54BDDDAF2D9065DB0036C958 /* CallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDAE2D9065DA0036C958 /* CallButton.swift */; };
 		54BDDDB12D9065F90036C958 /* HotelDetailsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDB02D9065F50036C958 /* HotelDetailsSheetView.swift */; };
 		54BDDDB32D906BD00036C958 /* DirectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDB22D906BCB0036C958 /* DirectionsViewModel.swift */; };
+		54BDDDB52D924C080036C958 /* HotelDetailsSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDB42D924C040036C958 /* HotelDetailsSheetViewModel.swift */; };
+		54BDDDB72D93968C0036C958 /* CurrentTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDB62D9396890036C958 /* CurrentTripView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,9 @@
 		54BDDDAE2D9065DA0036C958 /* CallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButton.swift; sourceTree = "<group>"; };
 		54BDDDB02D9065F50036C958 /* HotelDetailsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsSheetView.swift; sourceTree = "<group>"; };
 		54BDDDB22D906BCB0036C958 /* DirectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewModel.swift; sourceTree = "<group>"; };
+		54BDDDB42D924C040036C958 /* HotelDetailsSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsSheetViewModel.swift; sourceTree = "<group>"; };
+		54BDDDB62D9396890036C958 /* CurrentTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTripView.swift; sourceTree = "<group>"; };
+		54BDDDB82D9396BD0036C958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,9 @@
 		54BDC41A2D590BDE002D13B3 /* AirPorter */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDDB82D9396BD0036C958 /* Info.plist */,
+				54BDDDB62D9396890036C958 /* CurrentTripView.swift */,
+				54BDDDB42D924C040036C958 /* HotelDetailsSheetViewModel.swift */,
 				54BDDDB22D906BCB0036C958 /* DirectionsViewModel.swift */,
 				54BDDDB02D9065F50036C958 /* HotelDetailsSheetView.swift */,
 				54BDDDAE2D9065DA0036C958 /* CallButton.swift */,
@@ -267,12 +275,14 @@
 				54BDC42C2D590DD8002D13B3 /* WalkingRouteViewModel.swift in Sources */,
 				54BDC43A2D5DB628002D13B3 /* AirportDetailView.swift in Sources */,
 				54BDC4382D5DB60E002D13B3 /* AirportAmenitiesView.swift in Sources */,
+				54BDDDB52D924C080036C958 /* HotelDetailsSheetViewModel.swift in Sources */,
 				54BDDD8D2D8B84FD0036C958 /* AirportViewModel.swift in Sources */,
 				54BDC42E2D591193002D13B3 /* MapPolylineOverlay.swift in Sources */,
 				54BDDDAB2D90657D0036C958 /* LinkMetadataView.swift in Sources */,
 				54BDDD932D8D1CAE0036C958 /* Gate.swift in Sources */,
 				54BDDDB32D906BD00036C958 /* DirectionsViewModel.swift in Sources */,
 				54BDDDA92D9065660036C958 /* LinkView.swift in Sources */,
+				54BDDDB72D93968C0036C958 /* CurrentTripView.swift in Sources */,
 				54BDC41C2D590BDE002D13B3 /* AirPorterApp.swift in Sources */,
 				54BDDDA12D8F5AF20036C958 /* Hotel.swift in Sources */,
 				54BDC4362D5DACE8002D13B3 /* AmenityType.swift in Sources */,
@@ -419,6 +429,7 @@
 				DEVELOPMENT_TEAM = QP6QQPA4KA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirPorter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,6 +459,7 @@
 				DEVELOPMENT_TEAM = QP6QQPA4KA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirPorter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

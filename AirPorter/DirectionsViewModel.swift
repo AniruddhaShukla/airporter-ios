@@ -16,6 +16,11 @@ class DirectionsViewModel {
 
     private let geocoder = CLGeocoder()
     
+    var expectedTravelTime: TimeInterval?
+    
+    /// Distance in Km.
+    var distance: CLLocationDistance?
+    
     /// Calculate driving or public-transit directions between two coordinates.
     /// - Parameters:
     ///   - fromCoordinate: The starting coordinate.
@@ -56,4 +61,36 @@ class DirectionsViewModel {
             self.route = route
         }
     }
+    
+    func calculateETA(from fromCoordinate: CLLocationCoordinate2D,
+                      toCoordinate: CLLocationCoordinate2D,
+                      transportType: MKDirectionsTransportType = .automobile) async {
+        
+        // 1. Create MKPlacemark for start and destination
+        let startPlacemark = MKPlacemark(coordinate: fromCoordinate)
+        let endPlacemark = MKPlacemark(coordinate: toCoordinate)
+        
+        // 2. Create MKMapItems
+        let startMapItem = MKMapItem(placemark: startPlacemark)
+        let endMapItem = MKMapItem(placemark: endPlacemark)
+        
+        // 3. Create an MKDirections.Request
+        let request = MKDirections.Request()
+        request.source = startMapItem
+        request.destination = endMapItem
+        request.transportType = transportType
+        
+        // 4. Calculate the route
+        let directionsRequest = MKDirections(request: request)
+        do {
+            let response = try await directionsRequest.calculateETA()
+            expectedTravelTime = response.expectedTravelTime/60
+            distance = response.distance/1000
+        } catch {
+            self.errorMessage = "Unable to calculate ETA."
+            return
+        }
+        
+    }
 }
+

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct HotelDetailsSheetView: View {
     
@@ -14,6 +15,9 @@ struct HotelDetailsSheetView: View {
     
     
     @State private var viewModel: HotelDetailsSheetViewModel?
+    
+    @State private var showLookAround: Bool = false
+    @State private var lookAroundScene: MKLookAroundScene?
     
     init(hotel: Hotel, airport: Airport) {
         self.hotel = hotel
@@ -58,6 +62,19 @@ struct HotelDetailsSheetView: View {
                 if let phone = hotel.phone {
                     CallButton(phoneNumber: phone).padding(8.0)
                 }
+                Section {
+                    Button(action: {
+                        Task {
+                            await fetchLookAroundScene()
+                        }
+                        
+                    }, label: {
+                        HStack {
+                            Image(systemName: "binoculars.fill")
+                            Text("Look Around")
+                        }
+                    })
+                }
             }
 
         }
@@ -86,6 +103,27 @@ struct HotelDetailsSheetView: View {
 
     }
     
+    // New method to fetch Look Around scene
+     private func fetchLookAroundScene() async {
+         let request = MKLookAroundSceneRequest(coordinate: CLLocationCoordinate2D(latitude: hotel.lat, longitude: hotel.lon))
+         
+         Task {
+             do {
+                 let scene = try await request.scene
+                 await MainActor.run {
+                     self.lookAroundScene = scene
+                 }
+                 try? await Task.sleep(nanoseconds: 950_000_000) // 150 ms delay
+                 await MainActor.run {
+                     self.showLookAround = true
+                 }
+             } catch {
+                 print("Error fetching Look Around scene: \(error)")
+                 // Optionally show an alert to the user
+             }
+         }
+     }
+    
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading, spacing: 16) {
@@ -96,53 +134,19 @@ struct HotelDetailsSheetView: View {
         }
         .onAppear {
             Task {
-                await viewModel?.loadRoute()
+                await viewModel?.loadTravelTimeEstimates()
+                //await viewModel?.loadPublicTransitEstimates()
+            }
+        }
+        .sheet(isPresented: $showLookAround) {
+            if let scene = lookAroundScene {
+                LookAroundPreview(scene: $lookAroundScene)
+                    .edgesIgnoringSafeArea(.all)
+            } else {
+                Text("Look Around not available")
+                    .padding()
             }
         }
         .presentationDetents([.medium, .large])
-    }
-}
-
-import Foundation
-import MapKit
-
-@Observable
-class HotelDetailsSheetViewModel {
-    // This property will hold the textual route info to display
-    var distance: String = ""
-    var estimatedTravelTime: String = ""
-    
-    var fromAddress: CLLocationCoordinate2D
-    let toAddress: CLLocationCoordinate2D
-    
-    init(fromAddress: CLLocationCoordinate2D, toAddress: CLLocationCoordinate2D) {
-        self.fromAddress = fromAddress
-        self.toAddress = toAddress
-    }
-    
-    // We'll use your DirectionsViewModel to fetch directions.
-    private let directionsViewModel = DirectionsViewModel()
-    
-    /// Loads route info from a starting address (airport name) to the given hotel's address.
-    /// - Parameters:
-    ///   - fromAddress: The airport name or address to start from.
-    ///   - toAddress: The hotel's address.
-    func loadRoute() async {
-        // Start fetching directions (using automobile as the default)
-        directionsViewModel.getDirections(from: fromAddress, to: toAddress, transportType: .automobile)
-        
-        for _ in 0..<10 {
-            if let route = directionsViewModel.route {
-                // Format the route info with distance (in km) and expected travel time (in minutes)
-                self.distance = String(format: "%.2f km", route.distance / 1000)
-                let travelTimeMinutes = route.expectedTravelTime / 60.0
-                let roundedTravelTime = (travelTimeMinutes - floor(travelTimeMinutes)) > 0.5 ? ceil(travelTimeMinutes) : floor(travelTimeMinutes)
-                self.estimatedTravelTime = String(format: "%.0f minutes", roundedTravelTime)
-                return
-            }
-            try? await Task.sleep(nanoseconds: 500_000_000) // sleep 0.5 second
-        }
-        self.distance = "No route info available."
-        self.estimatedTravelTime = ""
     }
 }

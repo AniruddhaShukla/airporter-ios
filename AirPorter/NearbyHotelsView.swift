@@ -46,7 +46,7 @@ struct NearbyHotelsView: View {
                 List(hotels) { hotel in
                     VStack(alignment: .leading, spacing: 4.0) {
                         Text(hotel.name)
-                            .font(.title2).bold()
+                            .font(.title3).bold()
                         
                         if let website = hotel.website {
                             if let phone = hotel.phone {
@@ -54,8 +54,8 @@ struct NearbyHotelsView: View {
                                     if let website = hotel.website {
                                         Link(destination: URL(string: website)!) {
                                             HStack {
-                                                Image(systemName: "link.circle.fill").font(.headline)
-                                                Text("Website").font(.headline)
+                                                Image(systemName: "link.circle.fill").font(.subheadline)
+                                                Text("Website").font(.subheadline)
                                             }
                                         }
                                     }

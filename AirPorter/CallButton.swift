@@ -14,8 +14,8 @@ struct CallButton: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "phone.circle.fill").font(.headline)
-            Text("Call").font(.headline)
+            Image(systemName: "phone.circle.fill").font(.subheadline)
+            Text("Call").font(.subheadline)
         }
         .foregroundStyle(.accent)
         .onTapGesture {
