@@ -4,40 +4,32 @@
 //
 //  Created by Aniruddha Shukla on 3/27/25.
 //
-
 import SwiftUI
-
 struct LoginView: View {
-    @StateObject private var viewModel = AuthViewModel()
-    
+    @EnvironmentObject var authViewModel: AuthViewModel
+
     var body: some View {
         NavigationView {
             VStack(spacing: 16) {
-                Text("Log In")
-                    .font(.largeTitle)
-                    .bold()
-                
-                TextField("Email", text: $viewModel.email)
+                TextField("Email", text: $authViewModel.email)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
                     .padding()
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(8)
-                
-                SecureField("Password", text: $viewModel.password)
+
+                SecureField("Password", text: $authViewModel.password)
                     .padding()
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(8)
-                
-                // Show error messages if any.
-                if let errorMessage = viewModel.errorMessage {
+
+                if let errorMessage = authViewModel.errorMessage {
                     Text(errorMessage)
                         .foregroundColor(.red)
-                        .multilineTextAlignment(.center)
                 }
-                
+
                 Button(action: {
-                    viewModel.signIn()
+                    authViewModel.signIn()
                 }, label: {
                     Text("Log In")
                         .frame(maxWidth: .infinity)
@@ -46,12 +38,14 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 })
-                
+
                 NavigationLink("Don't have an account? Sign Up", destination: SignUpView())
                     .padding(.top, 8)
-                
+
                 Spacer()
             }
+            .navigationTitle("Login")
+            .navigationBarTitleDisplayMode(.inline)
             .padding()
         }
     }

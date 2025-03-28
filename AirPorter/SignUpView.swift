@@ -8,36 +8,44 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @StateObject private var viewModel = AuthViewModel()
-    
+    @EnvironmentObject var authViewModel: AuthViewModel
+
     var body: some View {
         NavigationView {
             VStack(spacing: 16) {
-                Text("Sign Up")
-                    .font(.largeTitle)
-                    .bold()
-                
-                TextField("Email", text: $viewModel.email)
+                TextField("First Name (optional)", text: $authViewModel.firstName)
+                    .textContentType(.givenName)
+                    .autocapitalization(.words)
+                    .padding()
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .cornerRadius(8)
+
+                TextField("Last Name (optional)", text: $authViewModel.lastName)
+                    .textContentType(.familyName)
+                    .autocapitalization(.words)
+                    .padding()
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .cornerRadius(8)
+
+                TextField("Email", text: $authViewModel.email)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
                     .padding()
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(8)
-                
-                SecureField("Password", text: $viewModel.password)
+
+                SecureField("Password", text: $authViewModel.password)
                     .padding()
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(8)
-                
-                // Show error messages if any.
-                if let errorMessage = viewModel.errorMessage {
+
+                if let errorMessage = authViewModel.errorMessage {
                     Text(errorMessage)
                         .foregroundColor(.red)
-                        .multilineTextAlignment(.center)
                 }
-                
+
                 Button(action: {
-                    viewModel.signUp()
+                    authViewModel.signUp()
                 }, label: {
                     Text("Sign Up")
                         .frame(maxWidth: .infinity)
@@ -46,12 +54,14 @@ struct SignUpView: View {
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 })
-                
+
                 NavigationLink("Already have an account? Log In", destination: LoginView())
                     .padding(.top, 8)
-                
+
                 Spacer()
             }
+            .navigationTitle("Sign Up")
+            .navigationBarTitleDisplayMode(.inline)
             .padding()
         }
     }

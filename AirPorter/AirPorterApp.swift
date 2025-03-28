@@ -17,9 +17,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 
-import SwiftUI
-import FirebaseCore
-
 @main
 struct AirPorterApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
@@ -27,7 +24,7 @@ struct AirPorterApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if authViewModel.isUserLoggedIn {
+            if authViewModel.isAuthenticated {
                 // User is signed in, show the main content
                 TabView {
                     ExploreView()
@@ -41,10 +38,17 @@ struct AirPorterApp: App {
                             Image(systemName: "calendar")
                             Text("Upcoming Flights")
                         }
+                    AccountSettingsView()
+                        .tabItem {
+                            Image(systemName: "person.crop.circle")
+                            Text("Account")
+                        }
                 }
+                .environmentObject(authViewModel)
             } else {
                 // User is not signed in, show the login view
                 LoginView()
+                    .environmentObject(authViewModel)
             }
         }
     }

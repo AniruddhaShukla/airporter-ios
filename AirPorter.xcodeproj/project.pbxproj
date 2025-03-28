@@ -51,6 +51,10 @@
 		54BDDDC52D963E640036C958 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDC42D963E640036C958 /* AuthViewModel.swift */; };
 		54BDDDC72D963E800036C958 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDC62D963E800036C958 /* SignUpView.swift */; };
 		54BDDDC92D963EA20036C958 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDC82D963EA20036C958 /* LoginView.swift */; };
+		54BDDDCB2D9644FA0036C958 /* AccountSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDCA2D9644FA0036C958 /* AccountSettingsViewModel.swift */; };
+		54BDDDCD2D96450E0036C958 /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDCC2D96450E0036C958 /* AccountSettingsView.swift */; };
+		54BDDDCF2D9645220036C958 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDCE2D9645220036C958 /* ImagePicker.swift */; };
+		54BDDDD12D9645560036C958 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 54BDDDD02D9645560036C958 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +100,9 @@
 		54BDDDC42D963E640036C958 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		54BDDDC62D963E800036C958 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		54BDDDC82D963EA20036C958 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		54BDDDCA2D9644FA0036C958 /* AccountSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewModel.swift; sourceTree = "<group>"; };
+		54BDDDCC2D96450E0036C958 /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
+		54BDDDCE2D9645220036C958 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +113,7 @@
 				54BDDDBF2D963B0D0036C958 /* FirebaseCrashlytics in Frameworks */,
 				54BDDDC12D963B0D0036C958 /* FirebaseVertexAI in Frameworks */,
 				54BDDDBB2D963B0D0036C958 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				54BDDDD12D9645560036C958 /* FirebaseStorage in Frameworks */,
 				54BDDDBD2D963B0D0036C958 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +140,9 @@
 		54BDC41A2D590BDE002D13B3 /* AirPorter */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDDCE2D9645220036C958 /* ImagePicker.swift */,
+				54BDDDCC2D96450E0036C958 /* AccountSettingsView.swift */,
+				54BDDDCA2D9644FA0036C958 /* AccountSettingsViewModel.swift */,
 				54BDDDC82D963EA20036C958 /* LoginView.swift */,
 				54BDDDC62D963E800036C958 /* SignUpView.swift */,
 				54BDDDC42D963E640036C958 /* AuthViewModel.swift */,
@@ -290,6 +301,7 @@
 				54BDDDA32D8F5BBD0036C958 /* NearbyHotelsView.swift in Sources */,
 				54BDDDAD2D9065B30036C958 /* LinkMetadataViewModel.swift in Sources */,
 				54BDDDA52D8F5C600036C958 /* NearbyHotelsViewModel.swift in Sources */,
+				54BDDDCB2D9644FA0036C958 /* AccountSettingsViewModel.swift in Sources */,
 				54BDDDA72D8FBA650036C958 /* NearbyHotelMapView.swift in Sources */,
 				54BDDD9B2D8F16EF0036C958 /* AirportDetailsSkinnyView.swift in Sources */,
 				54BDDDAF2D9065DB0036C958 /* CallButton.swift in Sources */,
@@ -310,6 +322,7 @@
 				54BDDDB32D906BD00036C958 /* DirectionsViewModel.swift in Sources */,
 				54BDDDA92D9065660036C958 /* LinkView.swift in Sources */,
 				54BDDDB72D93968C0036C958 /* CurrentTripView.swift in Sources */,
+				54BDDDCD2D96450E0036C958 /* AccountSettingsView.swift in Sources */,
 				54BDC41C2D590BDE002D13B3 /* AirPorterApp.swift in Sources */,
 				54BDDDA12D8F5AF20036C958 /* Hotel.swift in Sources */,
 				54BDC4362D5DACE8002D13B3 /* AmenityType.swift in Sources */,
@@ -318,6 +331,7 @@
 				54BDC4322D5911E7002D13B3 /* RoutePoint.swift in Sources */,
 				54BDDD912D8D1CA80036C958 /* GateResponse.swift in Sources */,
 				54BDDD952D8D1CCD0036C958 /* AirportGatesViewModel.swift in Sources */,
+				54BDDDCF2D9645220036C958 /* ImagePicker.swift in Sources */,
 				54BDDD8F2D8BCE0B0036C958 /* GateService.swift in Sources */,
 				54BDDD872D8B84840036C958 /* AirportService.swift in Sources */,
 			);
@@ -559,6 +573,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseVertexAI;
+		};
+		54BDDDD02D9645560036C958 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
