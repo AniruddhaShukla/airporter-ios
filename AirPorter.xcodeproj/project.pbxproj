@@ -43,6 +43,11 @@
 		54BDDDB32D906BD00036C958 /* DirectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDB22D906BCB0036C958 /* DirectionsViewModel.swift */; };
 		54BDDDB52D924C080036C958 /* HotelDetailsSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDB42D924C040036C958 /* HotelDetailsSheetViewModel.swift */; };
 		54BDDDB72D93968C0036C958 /* CurrentTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDB62D9396890036C958 /* CurrentTripView.swift */; };
+		54BDDDBB2D963B0D0036C958 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 54BDDDBA2D963B0D0036C958 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		54BDDDBD2D963B0D0036C958 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 54BDDDBC2D963B0D0036C958 /* FirebaseAuth */; };
+		54BDDDBF2D963B0D0036C958 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 54BDDDBE2D963B0D0036C958 /* FirebaseCrashlytics */; };
+		54BDDDC12D963B0D0036C958 /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 54BDDDC02D963B0D0036C958 /* FirebaseVertexAI */; };
+		54BDDDC32D963B920036C958 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54BDDDC22D963B920036C958 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +89,7 @@
 		54BDDDB42D924C040036C958 /* HotelDetailsSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsSheetViewModel.swift; sourceTree = "<group>"; };
 		54BDDDB62D9396890036C958 /* CurrentTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTripView.swift; sourceTree = "<group>"; };
 		54BDDDB82D9396BD0036C958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		54BDDDC22D963B920036C958 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54BDDDBF2D963B0D0036C958 /* FirebaseCrashlytics in Frameworks */,
+				54BDDDC12D963B0D0036C958 /* FirebaseVertexAI in Frameworks */,
+				54BDDDBB2D963B0D0036C958 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				54BDDDBD2D963B0D0036C958 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +126,7 @@
 		54BDC41A2D590BDE002D13B3 /* AirPorter */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDDC22D963B920036C958 /* GoogleService-Info.plist */,
 				54BDDDB82D9396BD0036C958 /* Info.plist */,
 				54BDDDB62D9396890036C958 /* CurrentTripView.swift */,
 				54BDDDB42D924C040036C958 /* HotelDetailsSheetViewModel.swift */,
@@ -233,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 54BDC40F2D590BDE002D13B3;
+			packageReferences = (
+				54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 54BDC4192D590BDE002D13B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +263,7 @@
 			files = (
 				54BDC4232D590BE1002D13B3 /* Preview Assets.xcassets in Resources */,
 				54BDC4202D590BE1002D13B3 /* Assets.xcassets in Resources */,
+				54BDDDC32D963B920036C958 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +515,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54BDDDBA2D963B0D0036C958 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		54BDDDBC2D963B0D0036C958 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		54BDDDBE2D963B0D0036C958 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		54BDDDC02D963B0D0036C958 /* FirebaseVertexAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54BDDDB92D963B0D0036C958 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseVertexAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 54BDC4102D590BDE002D13B3 /* Project object */;
 }
