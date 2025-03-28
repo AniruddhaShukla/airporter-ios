@@ -17,31 +17,35 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 
+import SwiftUI
+import FirebaseCore
+
 @main
 struct AirPorterApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var authViewModel = AuthViewModel()
+
     var body: some Scene {
         WindowGroup {
-            TabView(content: {
-//                CurrentTripView()
-//                    .tabItem {
-//                        Image(systemName: "airplane")
-//                        Text("Current Trip")
-//                    }
-                ExploreView()
-                    .tabItem {
-                        Image(systemName: "globe")
-                        Text("Explore Airports")
-                    }
-                
-                UpcomingTripsView()
-                    .tabItem {
-                        Image(systemName: "calendar")
-                        Text("Upcoming Flights")
-                    }
-                
-            })
-            
+            if authViewModel.isUserLoggedIn {
+                // User is signed in, show the main content
+                TabView {
+                    ExploreView()
+                        .tabItem {
+                            Image(systemName: "globe")
+                            Text("Explore Airports")
+                        }
+                    
+                    UpcomingTripsView()
+                        .tabItem {
+                            Image(systemName: "calendar")
+                            Text("Upcoming Flights")
+                        }
+                }
+            } else {
+                // User is not signed in, show the login view
+                LoginView()
+            }
         }
     }
 }

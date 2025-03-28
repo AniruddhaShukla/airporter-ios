@@ -48,6 +48,9 @@
 		54BDDDBF2D963B0D0036C958 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 54BDDDBE2D963B0D0036C958 /* FirebaseCrashlytics */; };
 		54BDDDC12D963B0D0036C958 /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 54BDDDC02D963B0D0036C958 /* FirebaseVertexAI */; };
 		54BDDDC32D963B920036C958 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54BDDDC22D963B920036C958 /* GoogleService-Info.plist */; };
+		54BDDDC52D963E640036C958 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDC42D963E640036C958 /* AuthViewModel.swift */; };
+		54BDDDC72D963E800036C958 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDC62D963E800036C958 /* SignUpView.swift */; };
+		54BDDDC92D963EA20036C958 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDDDC82D963EA20036C958 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		54BDDDB62D9396890036C958 /* CurrentTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTripView.swift; sourceTree = "<group>"; };
 		54BDDDB82D9396BD0036C958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		54BDDDC22D963B920036C958 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		54BDDDC42D963E640036C958 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		54BDDDC62D963E800036C958 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		54BDDDC82D963EA20036C958 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,9 @@
 		54BDC41A2D590BDE002D13B3 /* AirPorter */ = {
 			isa = PBXGroup;
 			children = (
+				54BDDDC82D963EA20036C958 /* LoginView.swift */,
+				54BDDDC62D963E800036C958 /* SignUpView.swift */,
+				54BDDDC42D963E640036C958 /* AuthViewModel.swift */,
 				54BDDDC22D963B920036C958 /* GoogleService-Info.plist */,
 				54BDDDB82D9396BD0036C958 /* Info.plist */,
 				54BDDDB62D9396890036C958 /* CurrentTripView.swift */,
@@ -284,11 +293,14 @@
 				54BDDDA72D8FBA650036C958 /* NearbyHotelMapView.swift in Sources */,
 				54BDDD9B2D8F16EF0036C958 /* AirportDetailsSkinnyView.swift in Sources */,
 				54BDDDAF2D9065DB0036C958 /* CallButton.swift in Sources */,
+				54BDDDC52D963E640036C958 /* AuthViewModel.swift in Sources */,
 				54BDDD8A2D8B84B80036C958 /* Airport.swift in Sources */,
 				545E23002D663CE300ACA246 /* FlyoverMapView.swift in Sources */,
+				54BDDDC92D963EA20036C958 /* LoginView.swift in Sources */,
 				54BDDDB12D9065F90036C958 /* HotelDetailsSheetView.swift in Sources */,
 				54BDC42C2D590DD8002D13B3 /* WalkingRouteViewModel.swift in Sources */,
 				54BDC43A2D5DB628002D13B3 /* AirportDetailView.swift in Sources */,
+				54BDDDC72D963E800036C958 /* SignUpView.swift in Sources */,
 				54BDC4382D5DB60E002D13B3 /* AirportAmenitiesView.swift in Sources */,
 				54BDDDB52D924C080036C958 /* HotelDetailsSheetViewModel.swift in Sources */,
 				54BDDD8D2D8B84FD0036C958 /* AirportViewModel.swift in Sources */,
